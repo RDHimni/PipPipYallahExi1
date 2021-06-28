@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/GoBackIcon"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/go_back_hand"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".05" />
+
+        <TextView
+            android:id="@+id/details_covoiturage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Détails du covoiturage"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".4"
+            app:layout_constraintStart_toEndOf="@+id/GoBackIcon"
+            app:layout_constraintTop_toTopOf="@+id/GoBackIcon"
+            app:layout_constraintVertical_bias="0" />
+
+        <ImageView
+            android:id="@+id/directionMv"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GoBackIcon"
+            app:layout_constraintVertical_bias="0"
+            app:srcCompat="@drawable/direction" />
+
+
+        <TextView
+            android:id="@+id/VilleDepartTvInOfferItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Casablanca"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/directionMv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".05"
+            app:layout_constraintStart_toEndOf="@+id/directionMv"
+            app:layout_constraintTop_toTopOf="@+id/directionMv"
+            app:layout_constraintVertical_bias="0" />
+
+        <TextView
+            android:id="@+id/VilleArriverTvInOfferItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Khouribga"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/directionMv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".05"
+            app:layout_constraintStart_toEndOf="@+id/directionMv"
+            app:layout_constraintTop_toBottomOf="@+id/VilleDepartTvInOfferItem"
+            app:layout_constraintVertical_bias="1" />
+
+        <TextView
+            android:id="@+id/DateDepartTvInOfferItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mer.28/04 à 09h42"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/VilleDepartTvInOfferItem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".8"
+            app:layout_constraintStart_toEndOf="@+id/VilleDepartTvInOfferItem"
+            app:layout_constraintTop_toTopOf="@+id/VilleDepartTvInOfferItem" />
+
+        <TextView
+            android:id="@+id/DateArriverTvInOfferItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mer.28/04 à 21h42"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/VilleArriverTvInOfferItem"
+            app:layout_constraintEnd_toEndOf="@+id/DateDepartTvInOfferItem"
+            app:layout_constraintStart_toStartOf="@+id/DateDepartTvInOfferItem"
+            app:layout_constraintTop_toTopOf="@+id/VilleArriverTvInOfferItem" />
+
+
+        <TextView
+            android:id="@+id/adrsdtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Adresse de départ :"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/directionMv"
+            app:layout_constraintTop_toBottomOf="@+id/directionMv"
+            app:layout_constraintVertical_bias="0" />
+
+        <ImageView
+            android:id="@+id/localisationIcon"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/cart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/DateArriverTvInOfferItem"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/VilleArriverTvInOfferItem"
+            app:layout_constraintVertical_bias="0" />
+
+        <TextView
+            android:id="@+id/adresseDepartTvInReservationFrag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Adresse de départ"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/localisationIcon"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/adrsdtitle"
+            app:layout_constraintTop_toBottomOf="@+id/adrsdtitle"
+            app:layout_constraintVertical_bias="0" />
+
+        <View
+            android:id="@+id/lineHorizontal0"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/localisationIcon"
+            app:layout_constraintStart_toStartOf="@+id/adresseDepartTvInReservationFrag"
+            app:layout_constraintTop_toBottomOf="@+id/adresseDepartTvInReservationFrag"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/villePassageTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Villes de passage:"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/directionMv"
+            app:layout_constraintTop_toBottomOf="@+id/lineHorizontal0"
+            app:layout_constraintVertical_bias="0" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ListVillepassage"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/lineHorizontal0"
+            app:layout_constraintStart_toStartOf="@+id/villePassageTv"
+            app:layout_constraintTop_toBottomOf="@+id/villePassageTv"
+            app:layout_constraintVertical_bias="0" />
+
+        <View
+            android:id="@+id/lineHorizontal1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/localisationIcon"
+            app:layout_constraintStart_toStartOf="@+id/adresseDepartTvInReservationFrag"
+            app:layout_constraintTop_toBottomOf="@+id/ListVillepassage"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+            android:id="@+id/lineHorizontal2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/localisationIcon"
+            app:layout_constraintStart_toStartOf="@+id/adresseDepartTvInReservationFrag"
+            app:layout_constraintTop_toBottomOf="@+id/lineHorizontal1"
+            app:layout_constraintVertical_bias="0" />
+
+        <View
+            android:id="@+id/lineHorizontal3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/localisationIcon"
+            app:layout_constraintStart_toStartOf="@+id/adresseDepartTvInReservationFrag"
+            app:layout_constraintTop_toBottomOf="@+id/lineHorizontal2"
+            app:layout_constraintVertical_bias="0" />
+
+        <View
+            android:id="@+id/lineHorizontal4"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/localisationIcon"
+            app:layout_constraintStart_toStartOf="@+id/adresseDepartTvInReservationFrag"
+            app:layout_constraintTop_toBottomOf="@+id/lineHorizontal3"
+            app:layout_constraintVertical_bias="0" />
+
+        <View
+            android:id="@+id/lineVertical0"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@+id/lineHorizontal4"
+            app:layout_constraintEnd_toEndOf="@+id/localisationIcon"
+            app:layout_constraintStart_toStartOf="@+id/adresseDepartTvInReservationFrag"
+            app:layout_constraintTop_toBottomOf="@+id/lineHorizontal1" />
+
+        <ImageView
+            android:id="@+id/numberPlaceMv"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/place_mv"
+            app:layout_constraintBottom_toTopOf="@+id/lineHorizontal2"
+            app:layout_constraintEnd_toStartOf="@+id/lineVertical0"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/lineHorizontal1"
+            app:layout_constraintTop_toBottomOf="@+id/lineHorizontal1" />
+
+        <TextView
+            android:id="@+id/numberPlaceTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintVertical_bias="0"
+            android:text="2 place(s) restante(s) Sur 4"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintBottom_toTopOf="@+id/lineHorizontal2"
+            app:layout_constraintEnd_toStartOf="@+id/lineVertical0"
+            app:layout_constraintStart_toEndOf="@+id/numberPlaceMv"
+            app:layout_constraintTop_toTopOf="@+id/numberPlaceMv" />
+
+        <ImageView
+            android:id="@+id/valiseSizeMv"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/valse_mv"
+            app:layout_constraintBottom_toTopOf="@+id/lineHorizontal3"
+            app:layout_constraintEnd_toStartOf="@+id/lineVertical0"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/lineHorizontal1"
+            app:layout_constraintTop_toBottomOf="@+id/lineHorizontal2" />
+
+        <TextView
+            android:id="@+id/valiseSizeTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="Petite valise"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toTopOf="@+id/lineHorizontal3"
+            app:layout_constraintEnd_toStartOf="@+id/lineVertical0"
+            app:layout_constraintStart_toEndOf="@+id/numberPlaceMv"
+            app:layout_constraintTop_toTopOf="@+id/valiseSizeMv"
+            app:layout_constraintVertical_bias="0" />
+
+        <ImageView
+            android:id="@+id/carModelMv"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/car_mv"
+            app:layout_constraintBottom_toTopOf="@+id/lineHorizontal4"
+            app:layout_constraintEnd_toStartOf="@+id/lineVertical0"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/lineHorizontal1"
+            app:layout_constraintTop_toBottomOf="@+id/lineHorizontal3" />
+
+        <TextView
+            android:id="@+id/carModelTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="FORD FOCUS Blanche"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintBottom_toTopOf="@+id/lineHorizontal4"
+            app:layout_constraintEnd_toStartOf="@+id/lineVertical0"
+            app:layout_constraintStart_toEndOf="@+id/numberPlaceMv"
+            app:layout_constraintTop_toBottomOf="@+id/lineHorizontal3"
+            app:layout_constraintVertical_bias="0" />
+
+        <ImageView
+            android:id="@+id/priceParPlaceMv"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/price_mv"
+            app:layout_constraintBottom_toTopOf="@+id/lineHorizontal2"
+            app:layout_constraintEnd_toEndOf="@+id/lineHorizontal1"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/lineVertical0"
+            app:layout_constraintTop_toBottomOf="@+id/lineHorizontal1" />
+
+        <TextView
+            android:id="@+id/priceParPlaceTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="91 Dh par passager Dont 5 Dh de frais de service"
+            app:layout_constraintVertical_bias="0"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintBottom_toTopOf="@+id/lineHorizontal2"
+            app:layout_constraintEnd_toEndOf="@+id/lineHorizontal1"
+            app:layout_constraintStart_toEndOf="@+id/priceParPlaceMv"
+            app:layout_constraintTop_toTopOf="@+id/priceParPlaceMv" />
+
+        <ImageView
+            android:id="@+id/trajetByKmMv"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/trajet_mv"
+            app:layout_constraintBottom_toTopOf="@+id/lineHorizontal3"
+            app:layout_constraintEnd_toEndOf="@+id/lineHorizontal1"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/lineVertical0"
+            app:layout_constraintTop_toBottomOf="@+id/lineHorizontal2" />
+
+        <TextView
+            android:id="@+id/trajetByKmTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintVertical_bias="0"
+            android:text="Trajet de 519 kms En 04h30"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_9sdp"
+            app:layout_constraintBottom_toTopOf="@+id/lineHorizontal3"
+            app:layout_constraintEnd_toEndOf="@+id/lineHorizontal1"
+            app:layout_constraintStart_toEndOf="@+id/priceParPlaceMv"
+            app:layout_constraintTop_toTopOf="@+id/trajetByKmMv" />
+
+        <ImageView
+            android:id="@+id/shareFbMv"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/fb_mv"
+            app:layout_constraintBottom_toTopOf="@+id/lineHorizontal4"
+            app:layout_constraintEnd_toEndOf="@+id/lineHorizontal1"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/lineVertical0"
+            app:layout_constraintTop_toBottomOf="@+id/lineHorizontal3" />
+
+        <TextView
+            android:id="@+id/shareFbTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="Partager l'offre"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/shareFbMv"
+            app:layout_constraintEnd_toEndOf="@+id/lineHorizontal1"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/priceParPlaceMv"
+            app:layout_constraintTop_toTopOf="@+id/shareFbMv" />
+
+        <View
+            android:id="@+id/lineHorizontal6"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintVertical_bias="0"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/shareFbMv"
+            app:layout_constraintEnd_toEndOf="@+id/shareFbTv"
+            app:layout_constraintStart_toStartOf="@+id/shareFbTv"
+            app:layout_constraintTop_toBottomOf="@+id/shareFbTv" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/UserMv"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:elevation="4dp"
+            android:src="@drawable/ridazd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/lineHorizontal4"
+            app:layout_constraintTop_toBottomOf="@+id/lineHorizontal4"
+            app:layout_constraintVertical_bias="0" />
+
+        <TextView
+            android:id="@+id/proposedParTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Offre proposée par"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/UserMv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/UserMv"
+            app:layout_constraintTop_toTopOf="@+id/UserMv"
+            app:layout_constraintVertical_bias="0" />
+
+        <TextView
+            android:id="@+id/UserNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="Mohamed"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/UserMv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/UserMv"
+            app:layout_constraintTop_toBottomOf="@+id/proposedParTv"
+            app:layout_constraintVertical_bias="0" />
+
+        <View
+            android:id="@+id/lineHorizontal5"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/UserMv"
+            app:layout_constraintEnd_toEndOf="@+id/UserNameTv"
+            app:layout_constraintStart_toStartOf="@+id/UserNameTv"
+            app:layout_constraintTop_toBottomOf="@+id/UserNameTv"
+            app:layout_constraintVertical_bias="0" />
+
+
+        <RatingBar
+            android:id="@+id/UserRatingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:numStars="5"
+            android:progressTint="#FFC107"
+            android:rating="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/lineHorizontal5"
+            app:layout_constraintTop_toBottomOf="@+id/lineHorizontal5"
+            app:layout_constraintVertical_bias=".0" />
+
+        <TextView
+            android:id="@+id/UserRatingNumberTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="- 5 Avis"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/UserRatingBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/UserRatingBar"
+            app:layout_constraintTop_toTopOf="@+id/UserRatingBar" />
+
+
+        <TextView
+            android:id="@+id/coditionMessageTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="En appuyant sur ce button j'accepte d'envoyer une demmande au conducteur"
+            android:textSize="@dimen/_9sdp"
+            android:gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/proposedParTv"
+            app:layout_constraintStart_toStartOf="@+id/UserMv"
+            app:layout_constraintTop_toBottomOf="@+id/UserMv"
+            app:layout_constraintVertical_bias="0" />
+
+        <Button
+            android:id="@+id/reserverBtnInResevationFrag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/reservation_btn_bg"
+            android:text="Réserver ma place"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/black"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/coditionMessageTv"
+            app:layout_constraintStart_toStartOf="@+id/coditionMessageTv"
+            app:layout_constraintTop_toBottomOf="@+id/coditionMessageTv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
